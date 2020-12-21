@@ -7,6 +7,7 @@ mkdir -p ${HOME}/.cloudshell/
 touch ${HOME}/.cloudshell/no-apt-get-warning
 sudo apt-get update
 sudo apt-get install -y supervisor xvfb openbox x11vnc dbus-x11 libdbus-glib-1-2
+sudo apt-get install -y lxpanel pcmanfm --no-install-recommends
 
 echo "Cloning noVNC and Websockify..."
 echo
