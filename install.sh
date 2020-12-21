@@ -2,6 +2,7 @@
 
 #cd ${HOME}
 
+mkdir -p ${HOME}/.config/
 mkdir -p ${HOME}/.cloudshell/
 touch ${HOME}/.cloudshell/no-apt-get-warning
 sudo apt-get update
