@@ -47,11 +47,11 @@ function daemonStart {
 function daemonStop {
     {
     supervisorctl stop novnc
-    supervisorctl stop fluxbox
     supervisorctl stop x11vnc
     supervisorctl stop xvfb
-    
-    killall Xvfb x11vnc websockify supervisord
+    supervisorctl stop desktop
+
+    killall Xvfb x11vnc websockify supervisord openbox lxpanel pcmanfm
     # https://stackoverflow.com/questions/11583562/how-to-kill-a-process-running-on-particular-port-in-linux
     fuser -k 8080/tcp
     }&> /dev/null

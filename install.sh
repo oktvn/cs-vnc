@@ -4,6 +4,7 @@
 
 mkdir -p ${HOME}/.config/
 mkdir -p ${HOME}/.cloudshell/
+sudo mkdir -p /opt/cs-vnc
 touch ${HOME}/.cloudshell/no-apt-get-warning
 sudo apt-get update
 sudo apt-get install -y supervisor xvfb openbox x11vnc dbus-x11 libdbus-glib-1-2
@@ -22,16 +23,21 @@ sudo cp /opt/noVNC/vnc.html /opt/noVNC/index.html
 echo "Configuring supervisord..."
 echo
 
-cp supervisord.conf ${HOME}/.config/supervisord.conf
+cp ./conf/supervisord.conf ${HOME}/.config/supervisord.conf
+
+echo "Configuring pcmanfm..."
+echo
+
+sudo cp ./misc/cs-vnc-default.png /opt/cs-vnc/
+cp -r ./conf/pcmanfm/ ${HOME}/.config/pcmanfm/
 
 # Creating proper directory for the script
 echo "Installing run script..."
 echo
 
-sudo mkdir -p /opt/cs-vnc
-
 # Copy the run script to proper /opt/ directory
-sudo cp run.sh /opt/cs-vnc/cs-vnc.sh
+sudo cp ./src/run.sh /opt/cs-vnc/cs-vnc.sh
+sudo cp ./src/desktop.sh /opt/cs-vnc/desktop.sh
 
 sudo ln -sf /opt/cs-vnc/cs-vnc.sh /usr/local/bin/cs-vnc
 

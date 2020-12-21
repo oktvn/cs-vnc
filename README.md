@@ -6,7 +6,7 @@ Cloudshell VNC
 
 This utility is intended to make it easy to run X11 GUI apps on Google's Cloud Shell Editor. 
 
-![Screenshot](screenshot.png)
+![Screenshot](misc/screenshot.png)
 
 What it includes?
 ------------
