@@ -1,3 +1,6 @@
+[<img src="https://img.shields.io/badge/Google%20Cloud%20Shell-Clone-5391FE?style=for-the-badge&logo=gnu-bash&logoColor=white">](https://ssh.cloud.google.com/cloudshell/editor?cloudshell_git_repo=https://github.com/oktvn/cs-vnc.git&shellonly=true)
+
+
 Cloudshell VNC
 ===
 
