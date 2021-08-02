@@ -18,9 +18,9 @@ As Google's Cloud Shell Editor containers are ephemeral, you have to run `instal
 
     ./install.sh
 
-One-liner (clone into a temp directory and run install.sh)
+One-liner (cloning into a temp directory and running install.sh)
 
-    cd `mktemp -d` && git clone https://github.com/oktvn/cs-vnc.git; ./cs-vnc/install.sh
+    cd `mktemp -d`; git clone https://github.com/oktvn/cs-vnc.git .; ./install.sh
 
 Running
 -------
